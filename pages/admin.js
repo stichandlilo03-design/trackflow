@@ -508,13 +508,13 @@ export default function AdminPage() {
                   label="Origin *"
                   value={form.origin}
                   onChange={(v) => setForm({ ...form, origin: v })}
-                  placeholder="Nairobi, Kenya"
+                  placeholder="Florida, Winter Haven"
                 />
                 <FormField
                   label="Destination *"
                   value={form.destination}
                   onChange={(v) => setForm({ ...form, destination: v })}
-                  placeholder="Mombasa, Kenya"
+                  placeholder="Texas, USA"
                 />
                 <div>
                   <label className="block text-dark-300 text-xs font-semibold tracking-wide mb-1.5">
@@ -615,7 +615,7 @@ export default function AdminPage() {
                     <input
                       value={newUpdate.location}
                       onChange={(e) => setNewUpdate({ ...newUpdate, location: e.target.value })}
-                      placeholder="Location (e.g. Nairobi Hub)"
+                      placeholder="Location (e.g. Texas Hub)"
                       className="bg-dark-800 border-2 border-dark-700 rounded-lg px-3 py-2 text-dark-50 text-sm"
                     />
                     <button
