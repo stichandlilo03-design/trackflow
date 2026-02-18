@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Layout({ children }) {
+export default function Layout({ children, isAdmin = false }) {
   const router = useRouter();
 
   return (
@@ -18,32 +18,55 @@ export default function Layout({ children }) {
             </span>
           </Link>
 
-          <div className="flex gap-1">
-            <Link
-              href="/"
-              className={`px-4 py-2 rounded-lg text-sm font-medium no-underline transition-all ${
-                router.pathname === "/"
-                  ? "text-brand-500 bg-brand-500/10"
-                  : "text-dark-300 hover:text-dark-100"
-              }`}
-            >
-              Track Shipment
-            </Link>
-            <Link
-              href="/admin"
-              className={`px-4 py-2 rounded-lg text-sm font-medium no-underline transition-all ${
-                router.pathname === "/admin"
-                  ? "text-brand-500 bg-brand-500/10"
-                  : "text-dark-300 hover:text-dark-100"
-              }`}
-            >
-              Admin Panel
-            </Link>
+          <div className="flex gap-1 items-center">
+            {isAdmin ? (
+              <>
+                <Link
+                  href="/"
+                  className="px-4 py-2 rounded-lg text-sm font-medium no-underline text-dark-300 hover:text-dark-100 transition-all"
+                >
+                  ← Back to Site
+                </Link>
+                <span className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">
+                  🔒 Admin
+                </span>
+              </>
+            ) : (
+              <Link
+                href="/"
+                className={`px-4 py-2 rounded-lg text-sm font-medium no-underline transition-all ${
+                  router.pathname === "/"
+                    ? "text-brand-500 bg-brand-500/10"
+                    : "text-dark-300 hover:text-dark-100"
+                }`}
+              >
+                Track Shipment
+              </Link>
+            )}
           </div>
         </div>
       </nav>
 
       <main>{children}</main>
+
+      {/* Footer for customer pages only */}
+      {!isAdmin && (
+        <footer className="border-t border-dark-700/50 mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 bg-gradient-to-br from-brand-500 to-brand-600 rounded-lg flex items-center justify-center text-xs">
+                ⚡
+              </div>
+              <span className="font-mono font-bold text-sm text-dark-400 tracking-widest">
+                TRACKFLOW
+              </span>
+            </div>
+            <p className="text-dark-500 text-xs">
+              &copy; {new Date().getFullYear()} TrackFlow. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      )}
     </div>
   );
 }

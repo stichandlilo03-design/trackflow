@@ -206,7 +206,7 @@ export default function AdminPage() {
   // Login screen
   if (!authed) {
     return (
-      <Layout>
+      <Layout isAdmin={true}>
         <Head>
           <title>Admin Login — TrackFlow</title>
         </Head>
@@ -246,7 +246,7 @@ export default function AdminPage() {
   }
 
   return (
-    <Layout>
+    <Layout isAdmin={true}>
       <Head>
         <title>Admin Dashboard — TrackFlow</title>
       </Head>

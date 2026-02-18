@@ -96,18 +96,20 @@ Open [http://localhost:3000](http://localhost:3000)
 ## How to Use
 
 ### As Admin:
-1. Go to `/admin` and log in (default password: `admin123`)
-2. Click **"+ New Shipment"** to create a tracking entry
-3. Fill in the shipment details (recipient, origin, destination, etc.)
-4. Set the current status
-5. Add activity updates (e.g., "Package picked up from sender")
-6. Save the shipment
-7. Copy the tracking ID and share it with your customer
+1. Go to `yoursite.com/admin` — this is a **hidden page**, not linked anywhere on the site. Only you know it!
+2. Log in with your password (default: `admin123`, change via env variable)
+3. Click **"+ New Shipment"** to create a tracking entry
+4. Fill in the shipment details (recipient, origin, destination, etc.)
+5. Set the current status
+6. Add activity updates (e.g., "Package picked up from sender")
+7. Save the shipment
+8. Copy the tracking ID and share it with your customer
 
 ### As Customer:
-1. Go to the homepage (`/`)
-2. Enter the tracking ID you received
-3. View shipment progress and activity log
+1. Customer goes to your homepage (`yoursite.com`)
+2. They enter the tracking ID you gave them
+3. They see shipment progress and activity log
+4. **They have no way to see or access the admin panel**
 
 ### Updating Shipment Status:
 - **Quick way:** Use the status dropdown directly in the shipment list
