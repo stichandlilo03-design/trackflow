@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://yoursite.com/sitemap.xml
+Sitemap: https://www.trackflow.sbs/sitemap.xml
