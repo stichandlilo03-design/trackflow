@@ -9,6 +9,10 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#0a0e1a" />
+        <meta name="robots" content="index, follow" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </Head>
       <body>
         <Main />

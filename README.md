@@ -119,6 +119,36 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Customization
 
+### SEO & Google Visibility (IMPORTANT!)
+
+Your site is fully optimized for Google out of the box. To complete the setup:
+
+1. **Edit `lib/siteConfig.js`** — Update your company name, domain, description, email, and keywords. This one file controls all your SEO tags.
+
+2. **Update `public/robots.txt`** — Replace `https://yoursite.com` with your actual Vercel URL.
+
+3. **Add an OG image** — Place a 1200×630px image at `public/og-image.png`. This shows when your link is shared on social media.
+
+4. **Submit to Google Search Console:**
+   - Go to [https://search.google.com/search-console](https://search.google.com/search-console)
+   - Add your Vercel URL as a property
+   - Verify ownership (Vercel makes this easy with DNS or HTML file)
+   - Submit your sitemap: `https://yoursite.com/sitemap.xml`
+
+5. **Optional — Google My Business:** If you're a local business, register at [Google Business Profile](https://business.google.com) to show up in map results.
+
+**What's included for SEO:**
+- Meta title, description, keywords on every page
+- Open Graph tags (Facebook, WhatsApp, LinkedIn previews)
+- Twitter Card tags
+- JSON-LD structured data (Organization + WebApplication + SearchAction)
+- Dynamic sitemap at `/sitemap.xml`
+- `robots.txt` that blocks `/admin` from crawlers
+- `noindex` on admin pages so Google never shows them
+- FAQ section with real content (Google loves FAQ pages)
+- Semantic HTML with proper heading structure (`h1`, `h2`, `h3`)
+- Mobile responsive (Google ranks mobile-friendly sites higher)
+
 ### Change Branding
 Edit `components/Layout.js` to change the logo and company name.
 

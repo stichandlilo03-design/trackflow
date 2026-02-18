@@ -209,6 +209,7 @@ export default function AdminPage() {
       <Layout isAdmin={true}>
         <Head>
           <title>Admin Login — TrackFlow</title>
+          <meta name="robots" content="noindex, nofollow" />
         </Head>
         <div className="flex items-center justify-center min-h-[calc(100vh-64px)] px-4">
           <div className="bg-dark-800 border border-dark-700 rounded-2xl p-10 sm:p-12 text-center max-w-sm w-full animate-fade-up">
@@ -249,6 +250,7 @@ export default function AdminPage() {
     <Layout isAdmin={true}>
       <Head>
         <title>Admin Dashboard — TrackFlow</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 animate-fade-up">
